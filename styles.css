@@ -302,17 +302,30 @@ textarea{ resize: vertical; }
   display:flex; gap: 14px;
 }
 .avatar{
-  width:48px; height:48px;
-  border-radius: 16px;
-  background: rgba(31,123,214,.18);
-  border: 1px solid rgba(31,123,214,.30);
-  display:grid; place-items:center;
-  font-weight: 800;
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+
+  /* Luxury-style ring + glow */
+  border: 3px solid rgba(184, 154, 90, .9);              /* gold ring */
+  box-shadow:
+    0 0 0 8px rgba(184, 154, 90, .14),                    /* outer halo */
+    0 18px 45px rgba(0, 0, 0, .55);                       /* depth */
+  background: rgba(255,255,255,.06);
+  overflow: hidden;
+  flex: 0 0 auto;
 }
+
+/* for <img class="avatar ..."> */
 .avatar--photo{
+  width: 96px;
+  height: 96px;
   object-fit: cover;
   display: block;
 }
+
 
 .role{ margin: 4px 0 10px; color: rgba(244,247,255,.72); font-size: 13px; }
 .person p{ margin:0; color: var(--muted); line-height: 1.6; font-size: 14px; }
