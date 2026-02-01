@@ -10,6 +10,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+<script>
+  document.querySelectorAll('a, button').forEach(el => {
+    if (el.textContent.trim().toLowerCase() === 'book now') {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        window.open(
+          'https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type',
+          '_blank'
+        );
+      });
+      el.style.cursor = 'pointer';
+    }
+  });
+</script>
 
 <body>
   <!-- Top Bar -->
