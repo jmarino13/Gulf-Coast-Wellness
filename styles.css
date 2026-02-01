@@ -330,6 +330,7 @@ textarea{ resize: vertical; }
   align-items: flex-start;
   gap: 14px;
 }
+.person{ overflow: hidden; }
 
 .person h3{
   margin: 0;
