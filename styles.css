@@ -313,6 +313,11 @@ textarea{ resize: vertical; }
 
   background: rgba(255,255,255,.06);
 }
+/* Prevent any global IMG rules from stretching headshots */
+.team img{
+  width: auto;
+  height: auto;
+}
 
 .person{
   border-radius: var(--radius2);
