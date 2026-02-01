@@ -330,6 +330,10 @@ textarea{ resize: vertical; }
 
   background: rgba(255,255,255,.06);
 }
+/* Center the crop inside the circle */
+#team .person > img{
+  object-position: 50% 35% !important;  /* slightly above center tends to frame faces well */
+}
 
 .person{
   border-radius: var(--radius2);
