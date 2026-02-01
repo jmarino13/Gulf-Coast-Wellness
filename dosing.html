@@ -2,85 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dosing Calculator — Gulf Coast Wellness & Peptides</title>
-  <meta name="description" content="Dosing calculator for educational purposes only." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luxury Medical Group | Dosing Calculator</title>
+  <meta name="robots" content="noindex,nofollow" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page-only tweaks that match your system */
+    .calc-wrap { max-width: 920px; margin: 0 auto; }
+    .calc-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .calc-result { font-size: 1.05rem; }
+    .calc-badge {
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.35rem .7rem; border-radius:999px;
+      border:1px solid rgba(148,163,184,.35);
+      background: rgba(15,23,42,.65);
+      color: var(--lm-text);
+      font-size:.8rem;
+    }
+    .calc-kpi{
+      display:grid; grid-template-columns: 1fr; gap:.75rem; margin-top: .75rem;
+    }
+    .kpi{
+      border:1px solid rgba(148,163,184,.22);
+      background: radial-gradient(circle at top left, rgba(184,154,90,.12), rgba(15,23,42,.95));
+      border-radius: 16px;
+      padding: 14px 14px;
+    }
+    .kpi .label{ color: var(--lm-muted); font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; }
+    .kpi .value{ margin-top:6px; font-size:1.2rem; font-weight:700; color: var(--lm-text); }
+    .lm-intake-form input[type="number"]{ border-radius: 14px; }
+    .calc-note{ margin-top: 12px; font-size:.85rem; color: var(--lm-muted); }
+    .calc-actions{ display:flex; gap:.75rem; flex-wrap:wrap; margin-top: .75rem; }
+    .calc-actions .lm-btn{ padding:.65rem 1.1rem; }
+
+    /* Make sure it’s great on mobile */
+    @media (max-width: 900px){
+      .calc-grid{ grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Top Bar -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <div class="topbar__left">
-        <span class="dot"></span>
-        <span>Educational tool • Not medical advice</span>
-      </div>
-      <div class="topbar__right">
-        <a class="topbar__link" href="index.html#contact">Book a Consultation</a>
-      </div>
-    </div>
-  </div>
-
   <!-- Header -->
-  <header class="header" id="top">
-    <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <img class="brand__logo" src="assets/logo.jpeg" alt="Gulf Coast Wellness & Peptides logo" />
+  <header class="lm-header">
+    <div class="lm-container lm-header-inner">
+      <a href="index.html" class="lm-logo-group">
+        <img src="images/luxury-logo.png" alt="Luxury Medical Group Logo" class="lm-logo-img">
+        <span class="lm-logo-text">Luxury Medical Group</span>
       </a>
 
-      <nav class="nav" id="nav">
-        <a href="index.html#how">How It Works</a>
+      <nav class="lm-nav">
         <a href="index.html#services">Services</a>
-        <a href="index.html#team">Leadership</a>
-       <a class="navBtn active" href="dosing.html">Dosing Calculator</a>
-
-        <a href="index.html#faq">FAQ</a>
-        <a class="btn btn--ghost navBtn" href="index.html#contact">Book / Contact</a>
+        <a href="index.html#founders">Founders</a>
+        <a href="calculator.html" class="lm-nav-cta">Dosing Calculator</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
-
-      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-    /* Header shadow on scroll */
-.header.scrolled{
-  box-shadow: 0 14px 40px rgba(0,0,0,.65);
-  background: rgba(5,7,12,.85);
-}
-
   </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="section__head">
-        <h2>Dosing Calculator</h2>
-        <p>
-          This calculator is provided for <strong>educational purposes only</strong> and is not medical advice.
-          Always follow instructions provided by a licensed medical professional.
-        </p>
-      </div>
+  <main class="lm-main">
+    <section class="lm-section">
+      <div class="lm-container calc-wrap">
+        <div class="lm-center" style="margin-bottom: 1.2rem;">
+          <h2 class="lm-section-title" style="margin-bottom:.75rem;">Dosing Calculator</h2>
+          <span class="calc-badge">Educational use only</span>
+          <div class="lm-small" style="margin-top:.75rem;">
+            This tool provides <strong>suggested conversion guidance</strong> (mg → mL → units). Always follow your licensed provider’s instructions.
+          </div>
+        </div>
 
-      <div class="calculatorShell">
-        <!-- Option 1: Embed your preferred calculator -->
-        <iframe
-          class="calcFrame"
-          src="https://www.refillpen.com/peptide-calculator"
-          title="Peptide Calculator"
-          loading="lazy"
-          referrerpolicy="no-referrer"
-        ></iframe>
-      </div>
+        <div class="lm-card lm-card-outline">
+          <div class="calc-grid">
+            <!-- Inputs -->
+            <div>
+              <h3 style="margin-top:0;">Inputs</h3>
 
-      <div class="disclaimer" style="margin-top:16px;">
-        <strong>Important:</strong> Do not use this tool to self-prescribe. Contact our team if you have questions.
+              <form class="lm-intake-form" onsubmit="return false;">
+                <label>
+                  Vial content (total medication in vial)
+                  <input id="vialMg" type="number" min="0" step="0.01" value="10" />
+                  <div class="lm-small">Example: 10 mg in the vial</div>
+                </label>
+
+                <label>
+                  Total diluent added (mL)
+                  <input id="diluentMl" type="number" min="0" step="0.01" value="2" />
+                  <div class="lm-small">Example: add 2.0 mL bacteriostatic water</div>
+                </label>
+
+                <label>
+                  Target dose per injection (mg)
+                  <input id="doseMg" type="number" min="0" step="0.001" value="0.25" />
+                  <div class="lm-small">Example: 0.25 mg</div>
+                </label>
+
+                <label>
+                  Syringe/pen scale
+                  <select id="unitScale">
+                    <option value="100">U-100 (1.0 mL = 100 units)</option>
+                    <option value="50">U-50 (1.0 mL = 50 units)</option>
+                    <option value="10">“0–1 mL” marked in tenths (1.0 mL = 10 marks)</option>
+                  </select>
+                  <div class="lm-small">Choose how your device is labeled</div>
+                </label>
+              </form>
+
+              <div class="calc-actions">
+                <button class="lm-btn lm-btn-primary" id="calcBtn" type="button">Calculate</button>
+                <button class="lm-btn lm-btn-ghost" id="resetBtn" type="button">Reset</button>
+              </div>
+
+              <div class="calc-note">
+                Tip: If your protocol is in <strong>mcg</strong>, convert to mg first (1000 mcg = 1 mg).
+              </div>
+            </div>
+
+            <!-- Outputs -->
+            <div>
+              <h3 style="margin-top:0;">Results</h3>
+
+              <div class="calc-kpi">
+                <div class="kpi">
+                  <div class="label">Concentration</div>
+                  <div class="value" id="concOut">—</div>
+                  <div class="lm-small">mg per mL</div>
+                </div>
+
+                <div class="kpi">
+                  <div class="label">Volume per dose</div>
+                  <div class="value" id="mlOut">—</div>
+                  <div class="lm-small">mL to draw</div>
+                </div>
+
+                <div class="kpi">
+                  <div class="label">Units / marks</div>
+                  <div class="value" id="unitsOut">—</div>
+                  <div class="lm-small">based on your selected scale</div>
+                </div>
+
+                <div class="kpi">
+                  <div class="label">Estimated doses per vial</div>
+                  <div class="value" id="dosesOut">—</div>
+                  <div class="lm-small">approximate</div>
+                </div>
+              </div>
+
+              <div class="lm-small" style="margin-top: 14px; line-height: 1.55;">
+                <strong>Disclaimer:</strong> This calculator is for educational purposes only and does not constitute medical advice.
+                Compounded/reconstituted products and devices vary. Always follow prescribing instructions and verify calculations with a licensed professional.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lm-center lm-section-note">
+          <a class="lm-link" href="index.html">← Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lm-footer">
+    <div class="lm-container lm-footer-inner">
+      © Luxury Medical Group. All Rights Reserved.
+      <div class="lm-footer-links">
+        <a href="index.html#contact">Contact</a>
+        <a href="calculator.html">Dosing Calculator</a>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <script src="app.js"></script>
+  <script>
+    function fmt(n, digits=2){
+      if (!isFinite(n)) return "—";
+      return Number(n).toFixed(digits);
+    }
+
+    function calculate(){
+      const vialMg = parseFloat(document.getElementById("vialMg").value);
+      const diluentMl = parseFloat(document.getElementById("diluentMl").value);
+      const doseMg = parseFloat(document.getElementById("doseMg").value);
+      const unitScale = parseFloat(document.getElementById("unitScale").value); // units per 1 mL
+
+      const conc = vialMg / diluentMl;          // mg per mL
+      const mlPerDose = doseMg / conc;          // mL
+      const units = mlPerDose * unitScale;      // “units” or “marks”
+      const dosesPerVial = vialMg / doseMg;
+
+      document.getElementById("concOut").textContent = `${fmt(conc, 3)} mg/mL`;
+      document.getElementById("mlOut").textContent = `${fmt(mlPerDose, 3)} mL`;
+      document.getElementById("unitsOut").textContent = `${fmt(units, 1)} units/marks`;
+      document.getElementById("dosesOut").textContent = `${fmt(dosesPerVial, 1)} doses`;
+    }
+
+    function resetForm(){
+      document.getElementById("vialMg").value = 10;
+      document.getElementById("diluentMl").value = 2;
+      document.getElementById("doseMg").value = 0.25;
+      document.getElementById("unitScale").value = 100;
+      calculate();
+    }
+
+    document.getElementById("calcBtn").addEventListener("click", calculate);
+    document.getElementById("resetBtn").addEventListener("click", resetForm);
+
+    // Auto-calc as they type
+    ["vialMg","diluentMl","doseMg","unitScale"].forEach(id=>{
+      document.getElementById(id).addEventListener("input", calculate);
+      document.getElementById(id).addEventListener("change", calculate);
+    });
+
+    calculate();
+  </script>
 </body>
 </html>
