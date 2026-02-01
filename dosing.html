@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dosing Calculator — Gulf Coast Wellness & Peptides</title>
+  <meta name="description" content="Dosing calculator for educational purposes only." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="dot"></span>
+        <span>Educational tool • Not medical advice</span>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__link" href="index.html#contact">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand__logo" src="assets/logo.jpeg" alt="Gulf Coast Wellness & Peptides logo" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#team">Leadership</a>
+        <a class="btn btn--soft navBtn" href="dosing.html">Dosing Calculator</a>
+        <a href="index.html#faq">FAQ</a>
+        <a class="btn btn--ghost navBtn" href="index.html#contact">Book / Contact</a>
+      </nav>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Dosing Calculator</h2>
+        <p>
+          This calculator is provided for <strong>educational purposes only</strong> and is not medical advice.
+          Always follow instructions provided by a licensed medical professional.
+        </p>
+      </div>
+
+      <div class="calculatorShell">
+        <!-- Option 1: Embed your preferred calculator -->
+        <iframe
+          class="calcFrame"
+          src="https://www.refillpen.com/peptide-calculator"
+          title="Peptide Calculator"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        ></iframe>
+      </div>
+
+      <div class="disclaimer" style="margin-top:16px;">
+        <strong>Important:</strong> Do not use this tool to self-prescribe. Contact our team if you have questions.
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
