@@ -295,6 +295,23 @@ textarea{ resize: vertical; }
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
+/* Leadership headshots: fixed circle + ring */
+.team .avatar{
+  width: 92px;
+  height: 92px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  overflow: hidden;
+
+  border: 3px solid rgba(56,189,248,.85);
+  box-shadow:
+    0 0 0 8px rgba(31,123,214,.14),
+    0 18px 45px rgba(0,0,0,.55);
+
+  background: rgba(255,255,255,.06);
+}
+
 /* Keep leadership headshots a fixed, luxury-sized circle */
 .team .avatar.avatar--photo{
   width: 92px !important;
@@ -312,11 +329,6 @@ textarea{ resize: vertical; }
     0 18px 45px rgba(0,0,0,.55);
 
   background: rgba(255,255,255,.06);
-}
-/* Prevent any global IMG rules from stretching headshots */
-.team img{
-  width: auto;
-  height: auto;
 }
 
 .person{
@@ -349,21 +361,7 @@ textarea{ resize: vertical; }
 
 
 
-/* Force round leadership photos + Luxury ring */
-.avatar.avatar--photo{
-  width: 96px;
-  height: 96px;
-  border-radius: 999px !important;
-  object-fit: cover;
-  display: block;
 
-  border: 3px solid rgba(56,189,248,.85);
-  box-shadow:
-    0 0 0 8px rgba(31,123,214,.14),
-    0 18px 45px rgba(0,0,0,.55);
-
-  background: rgba(255,255,255,.06);
-}
 
 
 .role{ margin: 4px 0 10px; color: rgba(244,247,255,.72); font-size: 13px; }
