@@ -295,6 +295,24 @@ textarea{ resize: vertical; }
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
+/* Keep leadership headshots a fixed, luxury-sized circle */
+.team .avatar.avatar--photo{
+  width: 92px !important;
+  height: 92px !important;
+  max-width: 92px !important;
+  max-height: 92px !important;
+
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  display: block !important;
+
+  border: 3px solid rgba(56,189,248,.85);
+  box-shadow:
+    0 0 0 8px rgba(31,123,214,.14),
+    0 18px 45px rgba(0,0,0,.55);
+
+  background: rgba(255,255,255,.06);
+}
 
 .person{
   border-radius: var(--radius2);
