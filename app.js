@@ -51,6 +51,17 @@ async function wireForm(formId, statusId) {
     } catch (err) {
       if (status) status.textContent = "Network error. Please try again.";
     }
+    // Luxury-style header shadow on scroll
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
   });
 }
 
