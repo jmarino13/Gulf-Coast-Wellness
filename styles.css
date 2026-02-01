@@ -489,6 +489,21 @@ textarea{ resize: vertical; }
     inset 0 0 0 1px rgba(255,255,255,.10),
     0 16px 40px rgba(31,123,214,.55);
 }
+/* Active nav state */
+.navBtn.active{
+  background-image:
+    linear-gradient(rgba(7,14,32,.92), rgba(7,14,32,.92)),
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #1f7bd6,
+      #0b5fb5
+    );
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.14),
+    0 18px 45px rgba(31,123,214,.65);
+}
 
 
 }
