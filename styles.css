@@ -443,10 +443,7 @@ textarea{ resize: vertical; }
   background: #fff;
 }
 /* ===============================
-   Luxury-style NAV pill buttons
-   =============================== */
-
-/* ===============================
+  /* ===============================
    Luxury-style NAV pill buttons
    =============================== */
 
@@ -461,18 +458,12 @@ textarea{ resize: vertical; }
 
   color: #eaf2ff;
   background: rgba(7,14,32,.55);
-
   border: 1px solid transparent;
 
   /* gradient outline */
   background-image:
     linear-gradient(rgba(7,14,32,.85), rgba(7,14,32,.85)),
-    linear-gradient(
-      135deg,
-      #1f7bd6,
-      #38bdf8,
-      #0b5fb5
-    );
+    linear-gradient(135deg, #1f7bd6, #38bdf8, #0b5fb5);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 
@@ -489,20 +480,43 @@ textarea{ resize: vertical; }
     inset 0 0 0 1px rgba(255,255,255,.10),
     0 16px 40px rgba(31,123,214,.55);
 }
-/* Active nav state */
+
 .navBtn.active{
   background-image:
     linear-gradient(rgba(7,14,32,.92), rgba(7,14,32,.92)),
-    linear-gradient(
-      135deg,
-      #38bdf8,
-      #1f7bd6,
-      #0b5fb5
-    );
+    linear-gradient(135deg, #38bdf8, #1f7bd6, #0b5fb5);
 
   box-shadow:
     inset 0 0 0 1px rgba(255,255,255,.14),
     0 18px 45px rgba(31,123,214,.65);
+}
+
+/* Header shadow on scroll */
+.header.scrolled{
+  box-shadow: 0 14px 40px rgba(0,0,0,.65);
+  background: rgba(5,7,12,.85);
+}
+
+/* Luxury-style page header spacing */
+.section__head h2{
+  font-size: 36px;
+  letter-spacing: -.6px;
+}
+.section__head p{
+  font-size: 16px;
+  max-width: 70ch;
+}
+
+/* Luxury-style calculator shell */
+.calculatorShell{
+  margin-top: 24px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.05),
+    0 28px 80px rgba(0,0,0,.65);
+  overflow: hidden;
 }
 
 
