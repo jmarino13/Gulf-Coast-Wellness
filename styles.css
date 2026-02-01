@@ -470,9 +470,13 @@ textarea{ resize: vertical; }
   letter-spacing: -.6px;
 }
 .section__head p{
+  margin:0;
+  color: var(--muted);
+  line-height: 1.6;
   font-size: 16px;
   max-width: 70ch;
 }
+
 
 /* Luxury-style calculator shell */
 .calculatorShell{
