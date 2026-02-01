@@ -6,51 +6,32 @@
   <title>Luxury Medical Group | Dosing Calculator</title>
   <meta name="robots" content="noindex,nofollow" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Page-only tweaks that match your system */
-    .calc-wrap { max-width: 920px; margin: 0 auto; }
-    .calc-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-    .calc-result { font-size: 1.05rem; }
-    .calc-badge {
-      display:inline-flex; align-items:center; gap:.5rem;
-      padding:.35rem .7rem; border-radius:999px;
-      border:1px solid rgba(148,163,184,.35);
-      background: rgba(15,23,42,.65);
-      color: var(--lm-text);
-      font-size:.8rem;
-    }
-    .calc-kpi{
-      display:grid; grid-template-columns: 1fr; gap:.75rem; margin-top: .75rem;
-    }
-    .kpi{
-      border:1px solid rgba(148,163,184,.22);
-      background: radial-gradient(circle at top left, rgba(184,154,90,.12), rgba(15,23,42,.95));
-      border-radius: 16px;
-      padding: 14px 14px;
-    }
-    .kpi .label{ color: var(--lm-muted); font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; }
-    .kpi .value{ margin-top:6px; font-size:1.2rem; font-weight:700; color: var(--lm-text); }
-    .lm-intake-form input[type="number"]{ border-radius: 14px; }
-    .calc-note{ margin-top: 12px; font-size:.85rem; color: var(--lm-muted); }
-    .calc-actions{ display:flex; gap:.75rem; flex-wrap:wrap; margin-top: .75rem; }
-    .calc-actions .lm-btn{ padding:.65rem 1.1rem; }
+ <style>
+  /* Page-only tweaks that match your system */
+  .calc-wrap { max-width: 920px; margin: 0 auto; }
+  .calc-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 
-    /* Make sure it’s great on mobile */
-    @media (max-width: 900px){
-      .calc-grid{ grid-template-columns: 1fr; }
-      /* Lock header logo size */
-.lm-logo{
-  height: 40px;          /* luxury size */
-  max-height: 40px;
-  width: auto;
-  padding: 6px;
-  border-radius: 10px;
-  background: rgba(255,255,255,.92);
-  display: block;
-}
+  /* Lock header logo size (ALL screen sizes) */
+  .lm-logo{
+    height: 40px;
+    width: auto;
+    max-height: 40px;
+    padding: 6px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.92);
+    display: block;
+  }
 
-    }
-  </style>
+  .lm-logo-text{
+    font-weight: 800;
+    letter-spacing: -.3px;
+  }
+
+  @media (max-width: 900px){
+    .calc-grid{ grid-template-columns: 1fr; }
+  }
+</style>
+
 </head>
 
 <body>
