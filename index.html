@@ -5,25 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gulf Coast Wellness & Peptides</title>
   <meta name="description" content="Premium wellness, peptide programs, and concierge-style support across the Gulf Coast." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<script>
-  document.querySelectorAll('a, button').forEach(el => {
-    if (el.textContent.trim().toLowerCase() === 'Book Consultation') {
-      el.addEventListener('click', e => {
-        e.preventDefault();
-        window.open(
-          'https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type',
-          '_blank'
-        );
-      });
-      el.style.cursor = 'pointer';
-    }
-  });
-</script>
 
 <body>
   <!-- Top Bar -->
@@ -36,15 +23,15 @@
       <div class="topbar__right">
         <a class="topbar__link" href="tel:+15044745111">Call: (504) 474-5111</a>
         <span class="sep">•</span>
-       <a
-  class="topbar__link Schedule Your Visit"
-  href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
-  target="_blank"
-  rel="noopener"
->
-  Schedule Your Visit
-</a>
 
+        <a
+          class="topbar__link"
+          href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
+          target="_blank"
+          rel="noopener"
+        >
+          Schedule Your Visit
+        </a>
       </div>
     </div>
   </div>
@@ -56,23 +43,28 @@
         <img class="brand__logo" src="assets/logo.jpeg" alt="Gulf Coast Wellness & Peptides logo" />
       </a>
 
-     <nav class="nav" id="nav">
-  <a href="#how">How It Works</a>
-  <a href="#services">Services</a>
-  <a href="#team">Leadership</a>
-  <a class="navBtn" href="dosing.html">Dosing Calculator</a>
-  <a href="#faq">FAQ</a>
- <a
-  class="btn btn--primary"
-  href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
-  target="_blank"
-  rel="noopener"
->
-  Book Consultation
-</a>
+      <nav class="nav" id="nav">
+        <a href="#how">How It Works</a>
+        <a href="#services">Services</a>
+        <a href="#team">Leadership</a>
+        <a class="navBtn" href="dosing.html">Dosing Calculator</a>
+        <a href="#faq">FAQ</a>
 
+        <a
+          class="btn btn--primary"
+          href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
+          target="_blank"
+          rel="noopener"
+        >
+          Book Consultation
+        </a>
+      </nav>
 
-
+      <!-- (Optional) menu button if your app.js uses it -->
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <!-- Hero -->
@@ -88,13 +80,13 @@
 
         <div class="hero__cta">
           <a
-  class="btn btn--primary"
-  href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
-  target="_blank"
-  rel="noopener"
->
-  Book Consultation
-</a>
+            class="btn btn--primary"
+            href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
+            target="_blank"
+            rel="noopener"
+          >
+            Book Consultation
+          </a>
 
           <a class="btn btn--soft" href="#services">Explore Services</a>
         </div>
@@ -151,7 +143,6 @@
               </select>
             </label>
 
-            <!-- Helpful metadata -->
             <input type="hidden" name="_subject" value="New Lead - Gulf Coast Wellness & Peptides" />
             <input type="hidden" name="_gotcha" style="display:none" />
 
@@ -213,20 +204,19 @@
           <p>Book a consult and we’ll walk you through options and next steps.</p>
         </div>
         <a
-  class="btn btn--primary"
-  href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
-  target="_blank"
-  rel="noopener"
->
-  Book Consultation
-</a>
-
+          class="btn btn--primary"
+          href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
+          target="_blank"
+          rel="noopener"
+        >
+          Book Consultation
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Programs -->
-<section class="section section--alt" id="how">
+  <!-- How it works -->
+  <section class="section section--alt" id="how">
     <div class="container">
       <div class="section__head">
         <h2>How it works</h2>
@@ -268,60 +258,51 @@
       </div>
 
       <div class="team">
+        <!-- Jude -->
         <div class="person">
-         <div class="avatar">
-  <div class="avatar">
-  <img class="avatar__img" src="assets/jude-headshot.jpg" alt="Jude Marino" />
-</div>
+          <div class="avatar">
+            <img class="avatar__img" src="assets/jude-headshot.jpg" alt="Jude Marino" />
+          </div>
+          <div>
+            <h3>Jude Marino</h3>
+            <p class="role">Co-Founder</p>
+            <p>
+              Leads operational strategy, infrastructure development, and patient experience across Gulf Coast Wellness & Peptides.
+              Focused on building scalable wellness systems that balance efficiency, quality, and consistency while supporting long-term growth and client satisfaction.
+            </p>
+          </div>
+        </div>
 
-<div class="team">
-  <!-- Jude -->
-  <div class="person">
-    <div class="avatar">
-      <img class="avatar__img" src="assets/jude-headshot.jpg" alt="Jude Marino" />
+        <!-- Chad (hidden for now) -->
+        <div class="person hide-chad">
+          <div class="avatar">
+            <img class="avatar__img" src="assets/Chad.jpeg" alt="Chad Kropp" />
+          </div>
+          <div>
+            <h3>Chad Kropp</h3>
+            <p class="role">Co-Founder</p>
+            <p>
+              Oversees client engagement, strategic partnerships, and regional growth initiatives. Works closely with patients and partners to ensure a high standard of service delivery while supporting sustainable expansion across key Gulf Coast markets.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dr. Ira -->
+        <div class="person">
+          <div class="avatar">
+            <img class="avatar__img" src="assets/Ira.jpeg" alt="Dr. Ira Markowitz" />
+          </div>
+          <div>
+            <h3>Dr. Ira Markowitz</h3>
+            <p class="role">Medical Director</p>
+            <p>
+              Provides medical oversight and clinical governance for applicable services. Ensures alignment with medical standards,
+              regulatory requirements, and best practices in patient safety and care delivery.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div>
-      <h3>Jude Marino</h3>
-      <p class="role">Co-Founder</p>
-      <p>
-        Leads operational strategy, infrastructure development, and patient experience across Gulf Coast Wellness & Peptides.
-        Focused on building scalable wellness systems that balance efficiency, quality, and consistency while supporting long-term growth and client satisfaction.
-      </p>
-    </div>
-  </div>
-
-  <!-- Chad (hidden for now) -->
-  <div class="person hide-chad">
-    <div class="avatar">
-      <img class="avatar__img" src="assets/Chad.jpeg" alt="Chad Kropp" />
-    </div>
-
-    <div>
-      <h3>Chad Kropp</h3>
-      <p class="role">Co-Founder</p>
-      <p>
-        Oversees client engagement, strategic partnerships, and regional growth initiatives. Works closely with patients and partners to ensure a high standard of service delivery while supporting sustainable expansion across key Gulf Coast markets.
-      </p>
-    </div>
-  </div>
-
-  <!-- Dr. Ira -->
-  <div class="person">
-    <div class="avatar">
-      <img class="avatar__img" src="assets/Ira.jpeg" alt="Dr. Ira Markowitz" />
-    </div>
-
-    <div>
-      <h3>Dr. Ira Markowitz</h3>
-      <p class="role">Medical Director</p>
-      <p>
-        Provides medical oversight and clinical governance for applicable services. Ensures alignment with medical standards, regulatory requirements, and best practices in patient safety and care delivery.
-      </p>
-    </div>
-  </div>
-</div>
-
   </section>
 
   <!-- FAQ -->
@@ -367,8 +348,6 @@
 
         <div class="contactCard">
           <h3>Send a Message</h3>
-
-          <!-- MAIN CONTACT FORM (Formspree) -->
           <form id="contactForm" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <label>
               Name
@@ -387,7 +366,6 @@
             <input type="hidden" name="_gotcha" style="display:none" />
 
             <button class="btn btn--primary btn--full" type="submit">Send Message</button>
-
             <div id="contactStatus" class="status" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -404,16 +382,14 @@
 
         <div class="footer__links">
           <a href="#services">Services</a>
-          <a href="#programs">Programs</a>
-          <a href="#team">Team</a>
+          <a href="#how">How It Works</a>
+          <a href="#team">Leadership</a>
           <a href="#faq">FAQ</a>
           <a href="#top">Back to top</a>
         </div>
 
         <div class="footer__legal">
-          <p>
-            © <span id="year"></span> Gulf Coast Wellness & Peptides. All rights reserved.
-          </p>
+          <p>© <span id="year"></span> Gulf Coast Wellness & Peptides. All rights reserved.</p>
           <p class="muted">
             Educational information only — not medical advice. If this website references any services that require clinical care,
             those are delivered under appropriate licensed oversight.
@@ -424,5 +400,21 @@
   </section>
 
   <script src="app.js"></script>
+
+  <!-- Safe JS that runs AFTER the page loads -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Footer year
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+
+      // (Optional) mobile nav toggle if your CSS expects .nav.open
+      const menuBtn = document.getElementById("menuBtn");
+      const nav = document.getElementById("nav");
+      if (menuBtn && nav) {
+        menuBtn.addEventListener("click", () => nav.classList.toggle("open"));
+      }
+    });
+  </script>
 </body>
 </html>
