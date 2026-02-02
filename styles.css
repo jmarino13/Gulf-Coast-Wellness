@@ -523,3 +523,36 @@ textarea{ resize: vertical; }
   .cards{ grid-template-columns: 1fr; }
   .grid2{ grid-template-columns: 1fr; }
 }
+/* ===============================
+   Leadership section (Luxury style)
+   =============================== */
+
+/* Hide Chad temporarily */
+.hide-chad{
+  display:none !important;
+}
+
+/* Centered 2-up layout */
+.team{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  justify-content:center;
+  justify-items:center;
+  gap:14px;
+  max-width:920px;
+  margin:0 auto;
+}
+
+.team .person{
+  width:100%;
+  max-width:440px;
+}
+
+/* Mobile */
+@media (max-width: 980px){
+  .team{
+    grid-template-columns:1fr;
+    max-width:560px;
+  }
+}
+
