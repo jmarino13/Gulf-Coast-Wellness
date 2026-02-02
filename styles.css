@@ -414,6 +414,15 @@ textarea{ resize: vertical; }
 }
 .team {
   justify-items: center;
+  .team{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 14px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
 }
 
 .navBtn{
