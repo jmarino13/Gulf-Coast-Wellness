@@ -408,6 +408,10 @@ textarea{ resize: vertical; }
 /* ===============================
    Luxury-style NAV pill buttons
    =============================== */
+/* Temporarily hide Chad's bio card */
+.hide-chad {
+  display: none !important;
+}
 
 .navBtn{
   position: relative;
