@@ -412,6 +412,9 @@ textarea{ resize: vertical; }
 .hide-chad {
   display: none !important;
 }
+.team {
+  justify-items: center;
+}
 
 .navBtn{
   position: relative;
