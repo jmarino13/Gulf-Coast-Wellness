@@ -651,4 +651,36 @@ height:400px;
 }
 
 
+}.brand-logo {
+height:70px;
+width:auto;
+}
+
+
+.hero-main-image {
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:40px;
+}
+
+
+.profile-image {
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+border-radius:22px;
+
+}
+
+
+.profile-placeholder {
+
+overflow:hidden;
+
+padding:0;
+
 }
