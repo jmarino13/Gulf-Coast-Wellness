@@ -1,422 +1,577 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gulf Coast Wellness & Peptides</title>
-  <meta name="description" content="Premium wellness, peptide programs, and concierge-style support across the Gulf Coast." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    Gulf Coast Wellness & Peptides | Advanced Wellness. Personalized Medicine.
+  </title>
+
+  <meta 
+    name="description" 
+    content="Gulf Coast Wellness & Peptides provides physician-directed medical weight loss, peptide therapy, hormone optimization, and longevity programs."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-  <!-- Top Bar -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <div class="topbar__left">
-        <span class="dot"></span>
-        <span>Premium wellness support • Gulf Coast</span>
-      </div>
-      <div class="topbar__right">
-        <a class="topbar__link" href="tel:+15044745111">Call: (504) 474-5111</a>
-        <span class="sep">•</span>
 
-        <a
-          class="topbar__link"
-          href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
-          target="_blank"
-          rel="noopener"
-        >
-          Schedule Your Visit
-        </a>
+
+<!-- NAVIGATION -->
+
+<header class="site-header">
+
+  <div class="container nav-container">
+
+    <div class="brand">
+      <div class="brand-name">
+        GULF COAST
+      </div>
+
+      <div class="brand-subtitle">
+        WELLNESS & PEPTIDES
       </div>
     </div>
-  </div>
 
-  <!-- Header -->
-  <header class="header" id="top">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Gulf Coast Wellness & Peptides home">
-        <img class="brand__logo" src="assets/logo.jpeg" alt="Gulf Coast Wellness & Peptides logo" />
+
+    <nav class="navigation">
+
+      <a href="#programs">
+        Programs
       </a>
 
-      <nav class="nav" id="nav">
-        <a href="#how">How It Works</a>
-        <a href="#services">Services</a>
-        <a href="#team">Leadership</a>
-        <a class="navBtn" href="dosing.html">Dosing Calculator</a>
-        <a href="#faq">FAQ</a>
+      <a href="dosing.html">
+        Clinical Tools
+      </a>
 
-        <a
-          class="btn btn--primary"
-          href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
-          target="_blank"
-          rel="noopener"
-        >
-          Book Consultation
-        </a>
-      </nav>
+      <a href="#approach">
+        Our Approach
+      </a>
 
-      <!-- (Optional) menu button if your app.js uses it -->
-      <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+      <a href="#team">
+        Medical Team
+      </a>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero__grid">
-      <div class="hero__copy">
-        <p class="kicker">Gulf Coast Wellness & Peptides</p>
-        <h1>High-touch wellness support with a modern, premium experience.</h1>
-        <p class="subhead">
-          Individualized programs, peptide-focused education, and concierge-style guidance designed to help you
-          feel better and stay consistent.
-        </p>
+      <a href="#resources">
+        Resources
+      </a>
 
-        <div class="hero__cta">
-          <a
-            class="btn btn--primary"
-            href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
-            target="_blank"
-            rel="noopener"
-          >
-            Book Consultation
-          </a>
+      <a href="#journey" class="nav-button">
+        Begin Your Journey
+      </a>
 
-          <a class="btn btn--soft" href="#services">Explore Services</a>
-        </div>
+    </nav>
 
-        <div class="hero__trust">
-          <div class="trustCard">
-            <div class="trustCard__title">Trusted Leadership</div>
-            <div class="trustCard__text">Co-founded by Jude Marino & Chad Kropp</div>
-          </div>
-          <div class="trustCard">
-            <div class="trustCard__title">Medical Oversight</div>
-            <div class="trustCard__text">Medical Director: Dr. Ira Markowitz</div>
-          </div>
-        </div>
-
-        <p class="fineprint">
-          *Information provided is for educational purposes only and is not medical advice.
-          Always consult a licensed medical professional for diagnosis or treatment.
-        </p>
-      </div>
-
-      <div class="hero__panel">
-        <div class="glassCard">
-          <div class="glassCard__header">
-            <div>
-              <h3>Request a Call Back</h3>
-              <p>Fast response during business hours.</p>
-            </div>
-            <div class="badge">Gulf Coast</div>
-          </div>
-
-          <!-- QUICK LEAD FORM (Formspree) -->
-          <form id="leadForm" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <label>
-              Full Name
-              <input name="name" type="text" placeholder="Your name" required />
-            </label>
-            <label>
-              Email
-              <input name="email" type="email" placeholder="you@email.com" required />
-            </label>
-            <label>
-              Phone
-              <input name="phone" type="tel" placeholder="(504) 474-5111" />
-            </label>
-            <label>
-              What are you interested in?
-              <select name="interest" required>
-                <option value="" selected disabled>Select one</option>
-                <option>Wellness consultation</option>
-                <option>Peptide education / programs</option>
-                <option>Membership options</option>
-                <option>Other</option>
-              </select>
-            </label>
-
-            <input type="hidden" name="_subject" value="New Lead - Gulf Coast Wellness & Peptides" />
-            <input type="hidden" name="_gotcha" style="display:none" />
-
-            <button class="btn btn--primary btn--full" type="submit">Submit</button>
-            <p class="formNote">By submitting, you agree to be contacted by phone/text/email.</p>
-
-            <div id="leadStatus" class="status" role="status" aria-live="polite"></div>
-          </form>
-        </div>
-
-        <div class="miniRow">
-          <div class="miniStat">
-            <div class="miniStat__num">Premium</div>
-            <div class="miniStat__label">Client Experience</div>
-          </div>
-          <div class="miniStat">
-            <div class="miniStat__num">Modern</div>
-            <div class="miniStat__label">Programs + Support</div>
-          </div>
-          <div class="miniStat">
-            <div class="miniStat__num">Gulf Coast</div>
-            <div class="miniStat__label">Local Focus</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section__head">
-        <h2>What we offer</h2>
-        <p>Premium support, clear steps, and an experience built for consistency.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Wellness Consultation</h3>
-          <p>Personalized intake and goal mapping with a clear plan of action.</p>
-        </article>
-        <article class="card">
-          <h3>Peptide Education</h3>
-          <p>Guidance and educational resources to help you understand your options.</p>
-        </article>
-        <article class="card">
-          <h3>Membership Support</h3>
-          <p>Simple monthly options designed to keep you on track with follow-ups.</p>
-        </article>
-        <article class="card">
-          <h3>Concierge Experience</h3>
-          <p>Fast communication, organized next steps, and high-touch client care.</p>
-        </article>
-      </div>
-
-      <div class="callout">
-        <div>
-          <h3>Want the “Luxury-style” experience — Gulf Coast edition?</h3>
-          <p>Book a consult and we’ll walk you through options and next steps.</p>
-        </div>
-        <a
-          class="btn btn--primary"
-          href="https://www.joinblvd.com/b/4382da6b-c033-4b8b-9d5d-0c4b0fc27745/widget#/visit-type"
-          target="_blank"
-          rel="noopener"
-        >
-          Book Consultation
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- How it works -->
-  <section class="section section--alt" id="how">
-    <div class="container">
-      <div class="section__head">
-        <h2>How it works</h2>
-        <p>Clear onboarding, easy communication, and a plan you can stick to.</p>
-      </div>
-
-      <div class="grid2">
-        <div class="feature">
-          <h3>Step 1: Consultation</h3>
-          <p>We learn your goals, history, and preferences. Then we map out a plan.</p>
-        </div>
-        <div class="feature">
-          <h3>Step 2: Program Selection</h3>
-          <p>We align the program with your lifestyle, schedule, and support needs.</p>
-        </div>
-        <div class="feature">
-          <h3>Step 3: Ongoing Support</h3>
-          <p>Follow-ups and check-ins to keep momentum and consistency high.</p>
-        </div>
-        <div class="feature">
-          <h3>Step 4: Review & Adjust</h3>
-          <p>We assess progress and adjust the plan based on results and goals.</p>
-        </div>
-      </div>
-
-      <div class="disclaimer">
-        <strong>Disclaimer:</strong> This site provides educational information only and does not provide medical advice.
-        Any services are delivered under appropriate clinical oversight where applicable.
-      </div>
-    </div>
-  </section>
-
-  <!-- Team -->
-  <section class="section" id="team">
-    <div class="container">
-      <div class="section__head">
-        <h2>Leadership</h2>
-        <p>Built on experience, operations, and professional medical oversight.</p>
-      </div>
-
-      <div class="team">
-        <!-- Jude -->
-        <div class="person">
-          <div class="avatar">
-            <img class="avatar__img" src="assets/jude-headshot.jpg" alt="Jude Marino" />
-          </div>
-          <div>
-            <h3>Jude Marino</h3>
-            <p class="role">Co-Founder</p>
-            <p>
-              Leads operational strategy, infrastructure development, and patient experience across Gulf Coast Wellness & Peptides.
-              Focused on building scalable wellness systems that balance efficiency, quality, and consistency while supporting long-term growth and client satisfaction.
-            </p>
-          </div>
-        </div>
-
-       <!-- Chad (hidden for now) -->
-<div class="person hide-chad" style="display:none !important;">
-
-  <div class="avatar">
-    <img class="avatar__img" src="assets/Chad.jpeg" alt="Chad Kropp" />
   </div>
-  <div>
-    <h3>Chad Kropp</h3>
-    <p class="role">Co-Founder</p>
-    <p>
-      Oversees client engagement, strategic partnerships, and regional growth initiatives. Works closely with patients and partners to ensure a high standard of service delivery while supporting sustainable expansion across key Gulf Coast markets.
-    </p>
-  </div>
+
+</header>
+
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+
+<div class="hero-content">
+
+
+<p class="eyebrow">
+PHYSICIAN DIRECTED • CONCIERGE WELLNESS
+</p>
+
+
+<h1>
+Advanced Wellness.
+<br>
+Personalized Medicine.
+<br>
+Lasting Results.
+</h1>
+
+
+<p class="hero-text">
+
+Customized medical weight loss, peptide therapy, hormone optimization, and longevity programs designed around your unique goals.
+
+</p>
+
+
+<div class="hero-actions">
+
+<a href="#journey" class="primary-button">
+Begin Your Journey
+</a>
+
+
+<a href="#programs" class="secondary-button">
+Explore Programs
+</a>
+
+
 </div>
 
 
-        <!-- Dr. Ira -->
-        <div class="person">
-          <div class="avatar">
-            <img class="avatar__img" src="assets/Ira.jpeg" alt="Dr. Ira Markowitz" />
-          </div>
-          <div>
-            <h3>Dr. Ira Markowitz</h3>
-            <p class="role">Medical Director</p>
-            <p>
-              Provides medical oversight and clinical governance for applicable services. Ensures alignment with medical standards,
-              regulatory requirements, and best practices in patient safety and care delivery.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- FAQ -->
-  <section class="section section--alt" id="faq">
-    <div class="container">
-      <div class="section__head">
-        <h2>Frequently asked questions</h2>
-        <p>Quick answers to common questions.</p>
-      </div>
 
-      <div class="faq">
-        <details>
-          <summary>How do I get started?</summary>
-          <p>Use the contact form below to book a consultation. We’ll confirm next steps and options.</p>
-        </details>
-        <details>
-          <summary>Do you provide medical advice on this website?</summary>
-          <p>No. This site is for educational purposes only and is not medical advice.</p>
-        </details>
-        <details>
-          <summary>Do you offer membership options?</summary>
-          <p>Yes — we can review membership-style support options during your consultation.</p>
-        </details>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section__head">
-        <h2>Contact</h2>
-        <p>Send a message and we’ll get back to you quickly.</p>
-      </div>
 
-      <div class="contactGrid">
-        <div class="contactCard">
-          <h3>Call / Text</h3>
-          <p class="big">(504) 474-5111</p>
-          <a class="btn btn--soft" href="tel:+15044745111">Tap to Call</a>
-          <p class="muted">Update this number in the HTML when ready.</p>
-        </div>
+<div class="hero-card">
 
-        <div class="contactCard">
-          <h3>Send a Message</h3>
-          <form id="contactForm" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <label>
-              Name
-              <input name="name" type="text" required />
-            </label>
-            <label>
-              Email
-              <input name="email" type="email" required />
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
-            </label>
+<div class="trust-item">
+<span>✓</span>
+Physician Directed Care
+</div>
 
-            <input type="hidden" name="_subject" value="Website Contact - Gulf Coast Wellness & Peptides" />
-            <input type="hidden" name="_gotcha" style="display:none" />
 
-            <button class="btn btn--primary btn--full" type="submit">Send Message</button>
-            <div id="contactStatus" class="status" role="status" aria-live="polite"></div>
-          </form>
-        </div>
-      </div>
+<div class="trust-item">
+<span>✓</span>
+Personalized Treatment Plans
+</div>
 
-      <footer class="footer">
-        <div class="footer__brand">
-          <img src="assets/logo.jpeg" alt="Gulf Coast Wellness & Peptides logo" />
-          <div>
-            <strong>Gulf Coast Wellness & Peptides</strong>
-            <div class="muted">Premium wellness support • Gulf Coast</div>
-          </div>
-        </div>
 
-        <div class="footer__links">
-          <a href="#services">Services</a>
-          <a href="#how">How It Works</a>
-          <a href="#team">Leadership</a>
-          <a href="#faq">FAQ</a>
-          <a href="#top">Back to top</a>
-        </div>
+<div class="trust-item">
+<span>✓</span>
+Concierge Experience
+</div>
 
-        <div class="footer__legal">
-          <p>© <span id="year"></span> Gulf Coast Wellness & Peptides. All rights reserved.</p>
-          <p class="muted">
-            Educational information only — not medical advice. If this website references any services that require clinical care,
-            those are delivered under appropriate licensed oversight.
-          </p>
-        </div>
-      </footer>
-    </div>
-  </section>
 
-  <script src="app.js"></script>
+<div class="trust-item">
 
-  <!-- Safe JS that runs AFTER the page loads -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Footer year
-      const y = document.getElementById("year");
-      if (y) y.textContent = new Date().getFullYear();
+<div class="vida-placeholder">
 
-      // (Optional) mobile nav toggle if your CSS expects .nav.open
-      const menuBtn = document.getElementById("menuBtn");
-      const nav = document.getElementById("nav");
-      if (menuBtn && nav) {
-        menuBtn.addEventListener("click", () => nav.classList.toggle("open"));
-      }
-    });
-  </script>
+VidaVerified
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- TRUST -->
+
+<section class="trust-bar">
+
+<div class="container trust-grid">
+
+
+<div>
+<h3>
+Medical Expertise
+</h3>
+<p>
+Provider-guided wellness solutions.
+</p>
+</div>
+
+
+<div>
+<h3>
+Personalized Care
+</h3>
+<p>
+Programs designed around your goals.
+</p>
+</div>
+
+
+<div>
+<h3>
+Advanced Wellness
+</h3>
+<p>
+Modern approaches to longevity.
+</p>
+</div>
+
+
+<div>
+<h3>
+Concierge Support
+</h3>
+<p>
+Guidance throughout your journey.
+</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- PROGRAMS -->
+
+<section id="programs" class="section">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<p class="eyebrow">
+OUR PROGRAMS
+</p>
+
+
+<h2>
+Programs Designed Around Your Goals
+</h2>
+
+
+<p>
+Every patient receives a personalized approach focused on improving health, confidence, and quality of life.
+</p>
+
+
+</div>
+
+
+
+<div class="card-grid">
+
+
+<div class="program-card">
+
+<h3>
+Medical Weight Loss
+</h3>
+
+<p>
+Physician-directed metabolic optimization programs designed to support sustainable weight management.
+</p>
+
+<a href="#">
+Learn More →
+</a>
+
+</div>
+
+
+
+
+<div class="program-card">
+
+<h3>
+Peptide Therapy
+</h3>
+
+<p>
+Advanced wellness solutions focused on recovery, performance, and healthy aging.
+</p>
+
+<a href="#">
+Learn More →
+</a>
+
+</div>
+
+
+
+
+<div class="program-card">
+
+<h3>
+Hormone Optimization
+</h3>
+
+<p>
+Personalized hormone support designed around your individual needs.
+</p>
+
+<a href="#">
+Learn More →
+</a>
+
+</div>
+
+
+
+
+<div class="program-card">
+
+<h3>
+Longevity Medicine
+</h3>
+
+<p>
+A proactive approach to optimizing health and future wellness.
+</p>
+
+<a href="#">
+Learn More →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- CLINICAL TOOLS -->
+
+<section class="tools-section">
+
+<div class="container">
+
+<p class="eyebrow">
+CLINICAL TOOLS
+</p>
+
+<h2>
+Your Wellness Toolkit
+</h2>
+
+
+<p>
+Explore educational resources and tools designed to help you better understand your wellness journey.
+</p>
+
+
+<a href="dosing.html" class="primary-button">
+Explore Dosing Calculator
+</a>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- APPROACH -->
+
+<section id="approach" class="section">
+
+<div class="container">
+
+<h2>
+A Better Approach To Wellness
+</h2>
+
+
+<div class="steps">
+
+
+<div>
+<strong>
+01
+</strong>
+
+<h3>
+Consultation
+</h3>
+
+<p>
+Understand your goals and create a personalized plan.
+</p>
+
+</div>
+
+
+<div>
+
+<strong>
+02
+</strong>
+
+<h3>
+Provider Review
+</h3>
+
+<p>
+Medical professionals review your wellness needs.
+</p>
+
+</div>
+
+
+
+<div>
+
+<strong>
+03
+</strong>
+
+<h3>
+Personalized Care
+</h3>
+
+<p>
+Receive ongoing support throughout your journey.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- TEAM -->
+
+
+<section id="team" class="section">
+
+<div class="container">
+
+
+<p class="eyebrow">
+MEDICAL LEADERSHIP
+</p>
+
+
+<h2>
+Experienced Leadership. Personalized Care.
+</h2>
+
+
+<div class="team-grid">
+
+
+<div class="team-card">
+
+<h3>
+Jude Marino
+</h3>
+
+<p>
+Founder
+</p>
+
+</div>
+
+
+
+<div class="team-card">
+
+<h3>
+Dr. Ira Markowitz
+</h3>
+
+<p>
+Medical Director
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- JOURNEY -->
+
+<section id="journey" class="journey-section">
+
+<div class="container">
+
+
+<h2>
+Your Wellness Journey Starts Here.
+</h2>
+
+
+<p>
+Take the first step toward personalized wellness with Gulf Coast.
+</p>
+
+
+<a href="#" class="primary-button">
+Begin Your Journey
+</a>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+<div class="container">
+
+<p>
+Gulf Coast Wellness & Peptides
+</p>
+
+
+<p>
+Designed & Powered by Marino Business Consulting
+</p>
+
+
+<p>
+Where Vision Becomes Growth™
+</p>
+
+
+</div>
+
+</footer>
+
+
+
 </body>
 </html>
