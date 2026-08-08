@@ -108,58 +108,179 @@ button{width:100%;background:var(--gold);color:#fff;border:0;padding:16px;border
 </div>
 
 <script>
-function formatDate(date){
-  const p=date.trim().split("/");
-  if(p.length!==3) return date.trim();
-  return `${p[2]}-${p[0].padStart(2,"0")}-${p[1].padStart(2,"0")}`;
+
+const params = new URLSearchParams(window.location.search);
+
+const presetExam = params.get("exam");
+
+const referralSource =
+params.get("ref") || "gulf-coast-website";
+
+
+if (presetExam === "3388" || presetExam === "4226") {
+
+  const presetRadio =
+  document.querySelector(
+    `input[name="exam_id"][value="${presetExam}"]`
+  );
+
+  if (presetRadio) {
+    presetRadio.checked = true;
+  }
+
 }
+
+
+function formatDate(date){
+
+  const p = date.trim().split("/");
+
+  if(p.length !== 3) {
+    return date.trim();
+  }
+
+  return `${p[2]}-${p[0].padStart(2,"0")}-${p[1].padStart(2,"0")}`;
+
+}
+
 
 async function startExam(){
-  const exam=document.querySelector('input[name="exam_id"]:checked');
-  const payload={
-    exam_id: exam ? Number(exam.value) : null,
-    first_name:document.getElementById("first").value.trim(),
-    last_name:document.getElementById("last").value.trim(),
-    email:document.getElementById("email").value.trim(),
-    phone_number:document.getElementById("phone").value.trim(),
-    date_of_birth:formatDate(document.getElementById("dob").value),
-    state:document.getElementById("state").value
+
+  const exam =
+  document.querySelector(
+    'input[name="exam_id"]:checked'
+  );
+
+
+  const payload = {
+
+    exam_id:
+    exam ? Number(exam.value) : null,
+
+    referral_source:
+    referralSource,
+
+    first_name:
+    document.getElementById("first").value.trim(),
+
+    last_name:
+    document.getElementById("last").value.trim(),
+
+    email:
+    document.getElementById("email").value.trim(),
+
+    phone_number:
+    document.getElementById("phone").value.trim(),
+
+    date_of_birth:
+    formatDate(
+      document.getElementById("dob").value
+    ),
+
+    state:
+    document.getElementById("state").value
+
   };
 
-  if(!payload.exam_id||!payload.first_name||!payload.last_name||!payload.email||!payload.phone_number||!payload.date_of_birth||!payload.state){
-    alert("Please complete all fields and choose an evaluation.");
+
+  if(
+    !payload.exam_id ||
+    !payload.first_name ||
+    !payload.last_name ||
+    !payload.email ||
+    !payload.phone_number ||
+    !payload.date_of_birth ||
+    !payload.state
+  ){
+
+    alert(
+      "Please complete all fields and choose an evaluation."
+    );
+
     return;
+
   }
 
-  const btn=document.getElementById("startButton");
-  const status=document.getElementById("status");
-  btn.disabled=true;
-  btn.textContent="Starting Evaluation...";
-  status.textContent="Connecting securely to Qualiphy.";
 
-  try{
-    const response=await fetch("https://gulf-coast-api.vercel.app/api/qualiphy/start",{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify(payload)
-    });
-    const result=await response.json();
+  const btn =
+  document.getElementById("startButton");
+
+  const status =
+  document.getElementById("status");
+
+
+  btn.disabled = true;
+
+  btn.textContent =
+  "Starting Evaluation...";
+
+  status.textContent =
+  "Connecting securely to Qualiphy.";
+
+
+  try {
+
+    const response = await fetch(
+      "https://gulf-coast-api.vercel.app/api/qualiphy/start",
+      {
+
+        method:"POST",
+
+        headers:{
+          "Content-Type":"application/json"
+        },
+
+        body:
+        JSON.stringify(payload)
+
+      }
+    );
+
+
+    const result =
+    await response.json();
+
 
     if(result.meeting_url){
-      window.location.href=result.meeting_url;
+
+      window.location.href =
+      result.meeting_url;
+
       return;
+
     }
 
-    alert(result.error_message||result.error||"Unable to start evaluation. Please try again.");
-  }catch(e){
-    console.error(e);
-    alert("Unable to connect to the evaluation service. Please try again.");
-  }finally{
-    btn.disabled=false;
-    btn.textContent="Start Evaluation";
-    status.textContent="";
+
+    alert(
+      result.error_message ||
+      result.error ||
+      "Unable to start evaluation. Please try again."
+    );
+
+
   }
+  catch(error){
+
+    console.error(error);
+
+    alert(
+      "Unable to connect to the evaluation service. Please try again."
+    );
+
+  }
+  finally{
+
+    btn.disabled = false;
+
+    btn.textContent =
+    "Start Evaluation";
+
+    status.textContent = "";
+
+  }
+
 }
+
 </script>
 </body>
 </html>
