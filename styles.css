@@ -354,7 +354,7 @@ color:var(--navy);
 
 position:relative;
 
-min-height:600px;
+overflow:visible;
 
 }
 
