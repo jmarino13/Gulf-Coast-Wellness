@@ -752,4 +752,16 @@ padding:0;
   .profile-placeholder {
     height: 300px;
   }
+}.hero-overlay-card {
+    left:40px;
+    z-index:10;
+}
+
+.hero-grid {
+    overflow:visible;
+}
+
+.hero-content {
+    position:relative;
+    z-index:2;
 }
