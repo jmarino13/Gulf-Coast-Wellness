@@ -396,8 +396,8 @@ box-shadow:var(--shadow);
 
 .hero-overlay-card {
     position:absolute;
-    bottom:40px;
-    right:40px;
+    bottom:25px;
+    right:25px;
     left:auto;
 
     background:white;
@@ -716,9 +716,10 @@ padding:0;
 }
 
 .hero-visual-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding-bottom:140px;
 }
 
 .hero-visual-copy span {
