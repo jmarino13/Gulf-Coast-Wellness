@@ -742,13 +742,40 @@ padding:0;
   font-size: .9rem;
 }
 
-@media (max-width: 900px) {
-  .profile-placeholder {
-    height: 300px;
-  }
+@media(max-width:900px){
 
+.navigation {
+display:none;
+}
 
-.hero-content {
-    position:relative;
-    z-index:2;
+.hero-grid {
+grid-template-columns:1fr;
+}
+
+.hero-overlay-card {
+
+position:relative;
+left:0;
+bottom:auto;
+margin-top:-60px;
+width:auto;
+
+}
+
+.card-grid {
+grid-template-columns:1fr;
+}
+
+.team-grid {
+grid-template-columns:1fr;
+}
+
+.hero-image-placeholder {
+height:400px;
+}
+
+.profile-placeholder {
+height:300px;
+}
+
 }
