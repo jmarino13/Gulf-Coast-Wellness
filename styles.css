@@ -400,9 +400,9 @@ box-shadow:var(--shadow);
     right:25px;
     left:auto;
     background:white;
-    padding:25px;
+    padding:22px;
     border-radius:28px;
-    width:260px;
+    width:240px;
     box-shadow:var(--shadow);
     z-index:10;
 }
