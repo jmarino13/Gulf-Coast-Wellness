@@ -125,7 +125,17 @@ Start Evaluation
 
 
 <script>
+function formatDate(date){
 
+const parts = date.split("/");
+
+if(parts.length !== 3){
+return date;
+}
+
+return `${parts[2]}-${parts[0]}-${parts[1]}`;
+
+}
 async function startExam(){
 
 const data = {
