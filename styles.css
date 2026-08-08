@@ -762,13 +762,17 @@ padding:0;
   .profile-placeholder {
     height: 300px;
   }
-}.hero-overlay-card {
-    left:40px;
+.hero-overlay-card {
+    position:absolute;
+    bottom:40px;
+    right:40px;
+    left:auto;
+    background:white;
+    padding:30px;
+    border-radius:28px;
+    width:300px;
+    box-shadow:var(--shadow);
     z-index:10;
-}
-
-.hero-grid {
-    overflow:visible;
 }
 
 .hero-content {
