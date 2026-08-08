@@ -614,22 +614,6 @@ grid-template-columns:1fr;
 
 
 
-.hero-overlay-card {
-
-position:relative;
-
-left:0;
-
-bottom:auto;
-
-margin-top:-60px;
-
-width:auto;
-
-}
-
-
-
 .card-grid {
 
 grid-template-columns:1fr;
@@ -762,18 +746,7 @@ padding:0;
   .profile-placeholder {
     height: 300px;
   }
-.hero-overlay-card {
-    position:absolute;
-    bottom:40px;
-    right:40px;
-    left:auto;
-    background:white;
-    padding:30px;
-    border-radius:28px;
-    width:300px;
-    box-shadow:var(--shadow);
-    z-index:10;
-}
+
 
 .hero-content {
     position:relative;
