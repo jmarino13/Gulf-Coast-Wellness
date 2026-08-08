@@ -168,6 +168,9 @@ body:JSON.stringify(data)
 
 const result = await response.json();
 
+console.log("QUALIPHY RESPONSE:", result);
+
+
 if(result.meeting_url){
 
 window.location.href=result.meeting_url;
@@ -175,12 +178,7 @@ window.location.href=result.meeting_url;
 }
 else{
 
-alert("Unable to start evaluation. Please try again.");
-
-}
-else{
-
-alert("Unable to start evaluation. Please try again.");
+alert(JSON.stringify(result));
 
 }
 
