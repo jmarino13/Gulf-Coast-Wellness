@@ -396,21 +396,18 @@ box-shadow:var(--shadow);
 
 .hero-overlay-card {
     position:absolute;
-    bottom:25px;
+    bottom:30px;
     right:25px;
     left:auto;
-
     background:white;
-
-    padding:30px;
-
+    padding:25px;
     border-radius:28px;
-
-    width:300px;
-
+    width:260px;
     box-shadow:var(--shadow);
-
     z-index:10;
+}
+.hero-visual-copy {
+    padding-right:240px;
 }
 .hero-content {
     position:relative;
