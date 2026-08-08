@@ -405,7 +405,10 @@ box-shadow:var(--shadow);
     box-shadow:var(--shadow);
     z-index:5;
 }
-
+.hero-content {
+    position:relative;
+    z-index:2;
+}
 
 
 .hero-overlay-card p {
